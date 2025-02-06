@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NATIONAL COMPUTER INSTITUTE</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensures the body takes at least the full height of the viewport */
+            font-family: 'shoner Bangla';
+            margin: 0;
+            padding: 0;
+            background-color: #5d41fe;
+        }
+        header {
+            background-color: #f50404;
+            color: white;
+            padding: 0.1px 0;
+            text-align: center;
+            font-size: 15px;
+            animation: flashText 2s infinite alternate;
+        }
+        @keyframes flashText {
+            0% { color: rgb(255, 255, 255); }
+            50% { color: rgb(97, 249, 231); }
+            100% { color: rgb(249, 34, 249); }
+        }
+        nav {
+            background-color: #f5f5f7;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: rgb(65, 15, 245);
+            text-align: center;
+            padding: 5px 16px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #e4f70d;
+            color: rgb(38, 4, 96);
+        }
+        .container {
+            flex: 1; /* This allows the container to grow and fill the available space */
+            padding: 2px;
+            text-align: center;
+        }
+        .flashing-button {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 10px;
+            color: rgb(250, 7, 7);
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            animation: flash 1s infinite alternate;
+        }
+        @keyframes flash {
+            0% { opacity: 1; }
+            100% { opacity: 0.5; }
+        }
+        .bca-button {
+            background-color: #00ff0d; /* Blue */
+        }
+        .dca-button {
+            background-color: #fcf406; /* Green */
+        }
+        .adca-button {
+            background-color: #58e3f9; /* Yellow */
+        }
+        .pgdca-button {
+            background-color: #0f0202; /* Red */
+        }
+        .html-button {
+            background-color: #270471; /* WHITE */
+        }
+        .AboutNationalComputerInstitute-button {
+            background-color: #fffdfd; /* Red */
+        }
+        .photo-box {
+            margin: 20px auto;
+            padding: 20px;
+            width: 300px;
+            border: 2px solid #333;
+            background: white;
+            text-align: center;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .photo-box img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .photo-box p {
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .whatsapp-button {
+            position: fixed;
+            top: 20px; /* Position from the top */
+            right: 20px; /* Position from the right */
+            background-color: #07f81b; /* Deep Red */
+            color: rgb(41, 6, 105);
+            border: none;
+            border-radius: 5px;
+            padding: 15px 20px;
+            font-size: 16px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+        .welcome-marquee {
+            background-color: #333; /* Dark background for marquee */
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            padding: 10px;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .welcome-marquee marquee {
+            animation: colorFlash 1s infinite;
+        }
+        @keyframes colorFlash {
+            0% { color: red; }
+            25% { color: yellow; }
+            50% { color: green; }
+            75% { color: blue; }
+            100% { color: purple; }
+        }
+        /* New CSS for "Call Us" button */
+        .call-us-button {
+            position: fixed;
+            bottom: 20px; /* Position from the top */
+            right: 20px; /* Position from the right */
+            transform: translateX(-50%);
+            background-color: #fc0905; /* Tomato color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 15px 25px;
+            font-size: 18px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            animation: flash 0.5s infinite alternate;
+        }
+        .message-container {
+            display: flex;
+            gap: 50px;
+            justify-content: center;
+        }
+        .message-box {
+            display: flex;
+            width: 500px;
+            height: 200px;
+            border: 2px solid #f9f904;
+            background: rgb(2, 235, 252);
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .message-box img {
+            width: 150px;
+            height: 100px;
+            object-fit: cover;
+            border-right: 2px solid #f9f4f4;
+        }
+        .message-content {
+            padding: 15px;
+        }
+        .message-title {
+            background-color: #fc0505;
+            color: rgb(255, 255, 255);
+            padding: 10px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .message-title::before {
+            content: '\2709';
+            font-size: 10px;
+        }
+        .message-content p {
+            margin: 5px 0;
+        }
+        .message-content a {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .facebook-link {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>NATIONAL COMPUTER INSTITUTE (BORHAWOR)</h1>
+</header>
+
+<!-- Marquee with Flashing Text in Multiple Colors -->
+<div class="welcome-marquee">
+    <marquee behavior="scroll" direction="left">
+        <b>WELCOME TO NATIONAL COMPUTER INSTITUTE, BORHAWOR, HOJAI (ASSAM) CALL US-8011050709</b>
+    </marquee>
+</div>
+
+<nav>
+    <a href="#home"><B>Home</B></a>
+    <a href="#about"><B>About</B></a>
+    <a href="#courses"><B>Courses</B></a>
+    <a href="#contact"><B>Contact</B></a>
+</nav>
+<div class="container">
+    <h2><font color="white">Select Your Course</font></h2>
+    <button class="flashing-button bca-button"><B>BCA</B></button>
+    <button class="flashing-button dca-button"><B>DCA</B></button>
+    <button class="flashing-button adca-button"><B>ADCA</B></button>
+    <button class="flashing-button pgdca-button"><B>PGDCA</B></button>
+    <button class="flashing-button html-button"><B>HTML</B></button>
+</div>
+<div class="message-container">
+    <div class="message-box">
+        <img src="bahar.jpg" alt="Director">
+        <div class="message-content">
+            <div class="message-title">Message from the Director</div>
+            <p>Your success is our success, and we encourage you to join us on this journey of learning and growth. Our goal is to empower you with the tools and confidence to achieve your dreams. 
+        ...</p>
+            <a href="#">Read More</a>
+            <div class="facebook-link">
+                <a href="https://www.facebook.com/bahar.allom/" target="_blank">Follow us on Facebook</a>
+            </div>
+        </div>
+    </div>
+    <div class="message-box">
+        <img src="mujib.png" alt="President">
+        <div class="message-content">
+            <div class="message-title">Message from the President</div>
+            <p>Our new website has been launched to provide students with easy access to course information, schedules, and resources, enhancing their learning experience...</p>
+            <a href="#">Read More</a>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <button class="flashing-button AboutNationalComputerInstitute-button"><B>About National Computer Institute</B></button>
+</div>
+<p><font color="white"><b>আপোনালোকক আমাৰ প্ৰতিষ্ঠানৰ পৰা এক উষ্ণ অভিনন্দন জনাইছোঁ! আমাৰ Institute-এ আপোনালোকক শ্ৰেষ্ঠ কম্পিউটাৰ শিক্ষা প্ৰদানৰ বাবে সদায় প্ৰতিশ্ৰুতিবদ্ধ। আজিৰ ডিজিটেল যুগত কম্পিউটাৰ জ্ঞান এক অপৰিহাৰ্য দক্ষতা হৈ পৰিছে, আৰু আমি আপোনালোকক এই ক্ষেত্ৰত সম্পূৰ্ণ সজ্জিত কৰি তোলাৰ বাবে অটুট পৰিশ্ৰম কৰি আহিছোঁ।
+
+    আমাৰ অভিজ্ঞ শিক্ষকমণ্ডলী, আধুনিক প্ৰযুক্তিৰ সহায়, আৰু বাস্তৱমুখী পাঠ্যক্ৰমৰ জৰিয়তে আপোনালোকে কম্পিউটাৰৰ মৌলিক ধাৰণাৰ পৰা আৰম্ভ কৰি উন্নত স্তৰৰ জ্ঞান লাভ কৰিব পাৰিব। আমি নিশ্চিত কৰিছোঁ যে আমাৰ প্ৰশিক্ষণৰ জৰিয়তে আপোনালোকে কেৱল তাত্ত্বিক জ্ঞানেই নহয়, বৰঞ্চ বাস্তৱ জগতত প্ৰয়োগ কৰিব পৰা দক্ষতাও অৰ্জন কৰিব পাৰিব।
+    
+    আপোনালোকৰ সফলতা আমাৰ প্ৰতিষ্ঠানৰ সফলতা। গতিকে, আমি আপোনালোকক আমাৰ লগত যুক্ত হৈ এই শিক্ষাৰ্থ যাত্ৰাত আগবাঢ়ি যাবলৈ অনুৰোধ জনাইছোঁ। আমাৰ লক্ষ্য হৈছে আপোনালোকক এক উজ্জ্বল ভৱিষ্যত গঢ় দিয়াত সহায় কৰা।(National Computer Institute, NCI) হৈছে এটা সুপৰিচিত শিক্ষানুষ্ঠান যি কম্পিউটাৰ সম্পৰ্কীয় বিভিন্ন কোৰ্চ আৰু প্ৰশিক্ষণ কাৰ্যসূচী আগবঢ়ায়। বৰহাওৰ, হোজাই (অসমত) অৱস্থিত এই প্ৰতিষ্ঠানটোৱে ছাত্ৰ-ছাত্ৰীসকলক তথ্য প্ৰযুক্তি আৰু কম্পিউটাৰ এপ্লিকেচনৰ ক্ষেত্ৰত দক্ষতা আৰু জ্ঞান প্ৰদান কৰিবলৈ লক্ষ্য ৰাখিছে।প্ৰতিষ্ঠানটোৱে আৰম্ভণিৰ পৰা আগশাৰীৰ ছাত্ৰ-ছাত্ৰীসকলৰ বাবে বিভিন্ন ধৰণৰ কোৰ্চ আগবঢ়ায়। ইয়াৰ ভিতৰত কিছুমান জনপ্ৰিয় কোৰ্চ হ’ল:
+
+    <p align="center"><font color="yellow">* BCA (বেকেলৰ অফ কম্পিউটাৰ এপ্লিকেচনছ)</p></font>
+    
+    <p align="center"><font color="yellow">*DCA (ডিপ্লমা ইন কম্পিউটাৰ এপ্লিকেচনছ)</p></font>
+    
+    <p align="center"><font color="yellow">*ADCA (এডভান্সড ডিপ্লমা ইন কম্পিউটাৰ এপ্লিকেচনছ)</p></font>
+    
+    <p align="center"><font color="yellow">*PGDCA (পোষ্ট গ্ৰেজুৱেট ডিপ্লমা ইন কম্পিউটাৰ এপ্লিকেচনছ)</p></font>
+    
+    <p><font color="white"><b>এই কোৰ্চসমূহত প্ৰগ্ৰেমিং, ছফ্টৱেৰ ডেভেলপমেন্ট, ডেটাবেছ মেনেজমেন্ট, ৱেব ডেভেলপমেন্ট আদি বিষয়ৰ ওপৰত তাত্ত্বিক জ্ঞান আৰু প্ৰায়োগিক দক্ষতা প্ৰদান কৰা হয়।</b></font></p>
+    <section id="courses">
+        <h2><font color ="white"><button class="flashing-button AboutNationalComputerInstitute-button"><b>Our Courses</b></button></font></h2>
+        <ul>
+            <li><font color="#00eeaa">বেছিক কম্পিউটাৰ শিক্ষা</font></li>
+            <li><font color="#00eeaa">প্ৰোগ্ৰামিং ভাষা</font></li>
+            <li><font color="#00eeaa">ৱেব ডিজাইন</font></li>
+            <li><font color="#00eeaa">নেটৱৰ্কিং আৰু ডেটাবেইচ মেনেজমেণ্ট</font></li>
+            <li><font color="#00eeaa">Artificial Intelligence</font></li>
+        </ul>
+    </section>
+<div>
+    <img src="2025 banner.jpg" width="400" alt="">
+    <img src="2025 banner.jpg" width="400" alt="">
+    <img src="2025 banner.jpg" width="400" alt="">
+</div>
+<button class="whatsapp-button" onclick="window.open('https://wa.me/918011050709', '_blank')">
+    WhatsApp Number
+</button>
+<!-- Flashing Call Us Button at the Bottom -->
+<button class="call-us-button" onclick="window.location.href='tel:+918011050709'">
+    Call Us Now
+</button>
+<section>
+    <h1>Follow Us on Facebook</h1>
+    <p>Stay connected with us on Facebook:</p>
+    <a href="https://www.facebook.com/profile.php?id=100092898614842" target="_blank">
+        <i class="fab fa-facebook"></i> Visit our Facebook Page
+    </a>
+</section>
+<section>
+<p>Phone: 8011050709</p>
+<p>Address: Borhawor,Hojai(Assam)782439</p>
+</section>
+<footer>
+    <p>&copy; 2023 National Computer Institute. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
